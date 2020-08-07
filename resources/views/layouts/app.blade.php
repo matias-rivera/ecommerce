@@ -33,14 +33,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('products.index')}}">{{ __('Products') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('products.create')}}">{{ __('Add Product') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-link">
-                            {{$productsCount}}
+                            <product-counter-component :count="{{$productsCount}}"></product-counter-component>
                         </li>
                         <!-- Authentication Links -->
                         @guest

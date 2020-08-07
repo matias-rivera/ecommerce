@@ -8,7 +8,7 @@
             <header class="bg-primary padding">
             </header>
             <div class="card-body">
-                <h2 class="card-title">{{product.title}}</h2>
+                <h2 class="card-title"><a :href="'/products/'+product.id">{{product.title}}</a></h2>
                 <h4 class="card-subtitle">{{product.humanPrice}}</h4>
                 <p class="card-text">{{product.description}}</p>
 
